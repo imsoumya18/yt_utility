@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Playlist Progress",
+  "version": "1.0.0",
+  "description": "Live progress bar for YouTube playlists, based on how much of each video's duration you've actually watched.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
